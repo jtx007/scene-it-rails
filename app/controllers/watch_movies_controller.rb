@@ -1,2 +1,0 @@
-class WatchMoviesController < ApplicationController
-end
