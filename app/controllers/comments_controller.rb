@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authorized
+  
   def new
     @comment = Comment.new
   end

@@ -8,5 +8,6 @@ class Movie < ApplicationRecord
   	movie_list = data['results'].each do |movie|
   		mov = Movie.find_or_create_by(title: movie['title'], release_date: movie["release_date"], description: movie["overview"], poster_path: movie["poster_path"], backdrop_path: movie["backdrop_path"])
   	end
+    movie_list
   end
 end
