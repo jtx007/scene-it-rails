@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  before_action :authorized
+
+  
   def new
     @post = Post.new
   end
@@ -11,4 +14,5 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :content)
   end
+
 end
