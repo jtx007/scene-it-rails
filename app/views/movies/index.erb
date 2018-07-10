@@ -1,0 +1,12 @@
+<h1>Marvel Avengers Collection</h1>
+
+<!-- https://image.tmdb.org/t/p/w500/ -->
+
+<ul style="list-style: none;">
+	<% @movies.each do |mov| %>
+    <li> <%= mov.poster_path%></li>
+		<li> <%= mov.title %> </li>
+		<li> <%= mov.description%> </li>
+		<li> <%= mov.release_date %> </li>
+		<%end%>
+</ul>
