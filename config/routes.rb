@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :movies
-  resources :comments
-  resources :posts
+  resources :movies do
+    resources :posts do
+      get 'comments', as: 'comments'
+    end
+  end
+  
   resources :users
 
   get '/login', to: "sessions#new", as: 'login'
