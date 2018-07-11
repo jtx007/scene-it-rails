@@ -13,12 +13,15 @@
     <nav>
       <% if current_user %>
         welcome <%= current_user.username %>
+        <%= link_to "Profile", user_path(current_user) %>
+
         <%= link_to 'Logout', logout_path, method: 'delete' %>
       <% else %>
         <%= link_to 'Login', login_path %>
+        <%= link_to "Register", new_user_path %>
+
       <% end %>
       <%= link_to " Movies", movies_path %>
-      <%= link_to "Register", new_user_path %>
     </nav>
 
     <%= yield %>
