@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :movies do
+  resources :movies
     resources :posts do
-      get 'comments', as: 'comments'
+      resources :comments
     end
-  end
+
 
   resources :users
 

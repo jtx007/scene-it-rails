@@ -9,5 +9,8 @@
 		<li> <%= @movie.description%> </li>
 		<li> <%= @movie.release_date %> </li> </h2> 
 </ul>
+<% @movie.posts.each do |post| %>
+<%= link_to post.title, post.comments %>
+<% end %>
 
-</center
+</center>
