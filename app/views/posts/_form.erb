@@ -3,4 +3,6 @@
 <p><%= f.text_field "title" %></p>
 <p><%= f.label "Content:" %></p>
 <p><%= f.text_area "content" %></p>
+<p>What movie does this pertain to?<%= f.collection_select :movie_id, Movie.all, :id, :title %></p>
+
 <p><%= f.submit "submit" %></p>
