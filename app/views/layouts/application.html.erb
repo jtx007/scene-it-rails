@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <% if current_user %>
         welcome <%= current_user.username %>
         <%= link_to "Profile", user_path(current_user) %>
