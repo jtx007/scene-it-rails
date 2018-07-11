@@ -13,3 +13,13 @@
  */
 
 @import "bootstrap";
+
+.jumbotron {
+  background-image: url('/assets/marvel.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: black;
+  border: 10px solid;
+  height: 600px;
+}
