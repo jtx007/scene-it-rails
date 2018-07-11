@@ -10,7 +10,7 @@
 		<li> <%= @movie.release_date %> </li> </h2> 
 </ul>
 <% @movie.posts.each do |post| %>
-<%= link_to post.title, post.comments %>
+  <%= link_to post.title, post_path(post) %>
 <% end %>
 
 </center>
