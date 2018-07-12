@@ -11,7 +11,7 @@
 		<li> <%= @movie.description%> </li>
 		<li> <%= @movie.release_date %> </li> </h2> 
 </ul>
-
+<%= link_to "Create New Post", new_post_path %>
 <ul style="list-style: none;">
   <% @movie.posts.each do |post| %>
     <li>

@@ -1,4 +1,10 @@
 <h1>Edit Post</h1>
-<%= form_for @post %>
-<%= render partial: "form", locals:{f: f} %>
+
+
+<%= form_for @post do |f| %>
+<%= f.label "Title:" %>
+<p><%= f.text_field "title" %></p>
+<p><%= f.label "Content:" %></p>
+<p><%= f.text_area "content" %></p>
+<p><%= f.submit "submit" %></p>
 <% end %>

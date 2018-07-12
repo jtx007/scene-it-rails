@@ -1,6 +1,6 @@
 <%= form_for ([@post, @post.comments.build]) do |f| %>
 
-<p><%= f.label @post.user.username %></p>
+<p><%= f.label current_user.username %></p>
 <p><%= f.label "content" %></p>
 <p><%= f.text_area "content" %></p>
 

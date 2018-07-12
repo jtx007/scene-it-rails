@@ -48,6 +48,8 @@ background-repeat: no-repeat;
 
 .nav-item{
   color: darkred;
+  margin: 8.5rem;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 .custom1{
@@ -78,7 +80,7 @@ background-repeat: no-repeat;
   background-image: url('http://interactive.sunmedia.ca/2014-07-archieInteractive//images/box.png');
   background-color: black;
   color: black;
-  margin: 0rem 0rem;
+  margin: 0rem 5rem;
   font-size: 3.25rem;
   border-radius: 10px;
   -webkit-transition-duration: 0.4s; /* Safari */
@@ -99,16 +101,12 @@ background-color: white;
 
 }
 
-.format{
-  margin: auto;
-  text-align: center;
-}
 
 
 
 .myBox {
 align-content: center;
-color: white;
+color: black;
 background-color: wheat;
 border: none;
 padding: 5px;
@@ -116,6 +114,15 @@ font: 24px/36px sans-serif;
 width: 400px;
 height: 200px;
 overflow: scroll;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10rem;
+margin-bottom: 10rem;
+}
+
+.format{
+  margin: auto;
+  text-align: center;
 }
 
 /* Scrollbar styles */

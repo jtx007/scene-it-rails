@@ -29,6 +29,9 @@ body, html, .parallax {
 		<h2>Posted By: <%=@user.username%></h2>
 		<%= @post.title %>
 		<%= @post.content %>
+    <% if current_user == @user %>
+    <%= link_to "Edit", edit_post_path(@post)  %>
+    <% end %>
 		<br>
 		<br>
 		<h2><%= @post.comments.count %> comments</h2>
