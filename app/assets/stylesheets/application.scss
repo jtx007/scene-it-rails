@@ -103,3 +103,37 @@ background-color: white;
   margin: auto;
   text-align: center;
 }
+
+
+
+.myBox {
+align-content: center;
+color: white;
+background-color: wheat;
+border: none;
+padding: 5px;
+font: 24px/36px sans-serif;
+width: 400px;
+height: 200px;
+overflow: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+
+::-webkit-scrollbar-track {
+border: 1px solid yellowgreen;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: yellowgreen;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #88ba1c;
+}

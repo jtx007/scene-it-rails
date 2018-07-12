@@ -21,8 +21,20 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+<div class="myBox">Welcome to Marvelit!. Your number one place to talk shop about the Marvel Cinematic Universe.  Get together with your fellow fanatics and talk about anything you want.  Register and create an account and just hop right in from the profile page!
+
+
+
+</div>
+
+
 <div>
-<%= link_to "Register", login_path, :class => "btn btn-lg" %>
+  <% if current_user %>
+<%= link_to "Register", user_path(current_user), :class => "btn btn-lg" %>
+<% else %>
+<%= link_to "Register", new_user_path, :class => "btn btn-lg" %>
+<%  end%>
 </div>
 </div>
 </body>
