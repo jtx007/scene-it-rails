@@ -48,3 +48,17 @@ background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 }
+
+.carousel-item{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: black;
+  border: 10px solid;
+  height: 600px;
+  text-align: center;
+}
+
+.nav-item{
+  color: darkred;
+}
