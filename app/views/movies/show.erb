@@ -1,16 +1,22 @@
 
+
+
 <center>
 
 <h1><%=@movie.title%></h1>
 
 <ul style="list-style: none;">
-    <li> <img src="https://image.tmdb.org/t/p/w500/<%= @movie.poster_path%>" alt="movie-poster"</li>
-<h2>	<li> <%= @movie.title %> </li>
+    <li> <img src="https://image.tmdb.org/t/p/w500/<%= @movie.backdrop_path%>" alt="backdrop_path"</li>
+<h2><li> <%= @movie.title %> </li>
 		<li> <%= @movie.description%> </li>
 		<li> <%= @movie.release_date %> </li> </h2> 
 </ul>
-<% @movie.posts.each do |post| %>
-  <%= link_to post.title, post_path(post) %>
-<% end %>
 
+<ul style="list-style: none;">
+  <% @movie.posts.each do |post| %>
+    <li>
+      <%= link_to post.title, post_path(post) %>
+    </li>
+  <% end %>
+</ul>
 </center>

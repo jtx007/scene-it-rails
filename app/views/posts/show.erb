@@ -1,19 +1,32 @@
 
 
-<%=@movie.title%>
+<style>
+.parallax {
+    /* The image used */
+    background-image: url("https://image.tmdb.org/t/p/w500/<%= @movie.poster_path%>");
 
+    /* Set a specific height */
+    height: 500px;
 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
 
+<!-- Container element -->
 
-
-
-
-<h2>Posts</h2>
-<%= @post.title %>
-<%= @post.content %>
-<br>
-<br>
-<h2><%= @post.comments.count %> comments</h2>
-<%= render @post.comments %>
-<h3>Add a comment</h3>
-<%= render "comments/form" %>
+	<div class="parallax">
+		<%=@movie.title%>
+		<h2>Posted By: <%=@user.username%></h2>
+		<%= @post.title %>
+		<%= @post.content %>
+		<br>
+		<br>
+		<h2><%= @post.comments.count %> comments</h2>
+		<%= render @post.comments %>
+		<h3>Add a comment</h3>
+		<%= render "comments/form" %>
+	</div>
