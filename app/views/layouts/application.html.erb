@@ -24,24 +24,32 @@
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="mr-auto bg-black" class="d-flex justify-content-end">
         <!-- <h5 class="text-white h4"> -->
-        <%= link_to "Home", root_path, class: "nav-item" %>
-          <% if current_user %>
+        <% if current_user %>
+        <%= link_to "Home", root_path, class: "nav-item" "float-center" %>
+        <%= link_to "Profile", user_path(current_user), class: "nav-item" %>
+        <%= link_to "Movies", movies_path, class: "nav-item" %>
+        <%= link_to 'Logout', logout_path, method: 'delete', class: "nav-item" %>
+        <%else%>
+        <%= link_to "Home", root_path, class: "nav-item" "float-center" %>
+        <%= link_to "Movies", movies_path, class: "nav-item" %>
+        <%= link_to "Register", new_user_path, class: "nav-item"%>
+        <%end%>
+          <!-- <% if current_user %>
           <%= link_to "Profile", user_path(current_user), class: "nav-item" %>
-
           <%= link_to 'Logout', logout_path, method: 'delete', class: "nav-item" %>
         <% else %>
           <%= link_to 'Login', login_path, class: "nav-item" %>
           <%= link_to "Register", new_user_path, class: "nav-item"%>
         <% end %>
-        <%= link_to " Movies", movies_path, class: "nav-item" %>
+        <%= link_to " Movies", movies_path, class: "nav-item" %> -->
 
-        <a class="nav-item text-muted">
+        <!-- <a class="nav-item text-muted">
           <%if current_user %>
             <i>Welcome <%= current_user.username %></i>
           <% else %>
             <i><%= link_to "Register Here", new_user_path, class: "nav-item" %></i>
           <% end %>
-        </a>
+        </a> -->
       </div>
     </div>
   </nav>
