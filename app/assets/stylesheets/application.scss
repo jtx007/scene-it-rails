@@ -37,7 +37,8 @@
   padding-right: 92rem;
 }
 
-.banner-in-emergency {background-image: url('https://img00.deviantart.net/3f96/i/2014/356/d/8/marvel_cinematic_universe_banner_by_paulrom-d8att2s.jpg');
+.banner-in-emergency {
+background-image: url('https://img00.deviantart.net/3f96/i/2014/356/d/8/marvel_cinematic_universe_banner_by_paulrom-d8att2s.jpg');
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -95,4 +96,10 @@ background-color: white;
 .first{
   background-color: black;
   color: white;
+
+}
+
+.format{
+  margin: auto;
+  text-align: center;
 }

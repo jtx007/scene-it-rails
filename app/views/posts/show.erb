@@ -1,12 +1,15 @@
 
 
 <style>
+body, html, .parallax {
+  height: 100%;
+}
+
+
 .parallax {
     /* The image used */
     background-image: url("/assets/YPBnXKE.jpg");
 
-    /* Set a specific height */
-    height: 100%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -19,7 +22,7 @@
 <!-- Container element -->
 
 	<div class="parallax">
-		
+
 
 
 			<%=@movie.title%>
@@ -33,27 +36,5 @@
 		<h3>Add a comment</h3>
 		<%= render "comments/form" %>
 
-
-
-
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
 
 	</div>
