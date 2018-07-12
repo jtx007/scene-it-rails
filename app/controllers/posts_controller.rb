@@ -15,6 +15,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @movie = Movie.find(@post.movie_id)
+    @user = User.find(@post.user_id)
+    #byebug
   end
 
   private
