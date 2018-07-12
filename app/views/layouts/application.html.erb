@@ -16,17 +16,16 @@
 
 
 
-  <nav class="navbar navbar-dark bg-black p-4">
+  <nav class="navbar sticky-top navbar-dark bg-black p-4">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse" id="navbarToggleExternalContent">
-      <div class="mr-auto bg-black">
+      <div class="mr-auto bg-black" class="d-flex justify-content-end">
         <!-- <h5 class="text-white h4"> -->
         <%= link_to "Home", root_path, class: "nav-item" %>
           <% if current_user %>
-        <div class="row-fluid"><div class="span">
           <%= link_to "Profile", user_path(current_user), class: "nav-item" %>
 
           <%= link_to 'Logout', logout_path, method: 'delete', class: "nav-item" %>
@@ -46,7 +45,7 @@
       </div>
     </div>
   </nav>
-</div>
+
 
 
     <%= yield %>
