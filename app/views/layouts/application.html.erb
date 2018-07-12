@@ -22,11 +22,11 @@
     </button>
 
     <div class="collapse" id="navbarToggleExternalContent">
-      <div id="floating-left" class="mr-auto bg-black">
+      <div class="mr-auto bg-black">
         <!-- <h5 class="text-white h4"> -->
         <%= link_to "Home", root_path, class: "nav-item" %>
           <% if current_user %>
-        <!-- <div class="row-fluid"><div class="span"> -->
+        <div class="row-fluid"><div class="span">
           <%= link_to "Profile", user_path(current_user), class: "nav-item" %>
 
           <%= link_to 'Logout', logout_path, method: 'delete', class: "nav-item" %>
@@ -46,8 +46,7 @@
       </div>
     </div>
   </nav>
-
-<!-- </div> -->
+</div>
 
 
     <%= yield %>

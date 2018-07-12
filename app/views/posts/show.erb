@@ -3,10 +3,10 @@
 <style>
 .parallax {
     /* The image used */
-    background-image: url("https://image.tmdb.org/t/p/w500/<%= @movie.poster_path%>");
+    background-image: url("/assets/YPBnXKE.jpg");
 
     /* Set a specific height */
-    height: 500px;
+    height: 100%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -19,7 +19,10 @@
 <!-- Container element -->
 
 	<div class="parallax">
-		<%=@movie.title%>
+		
+
+
+			<%=@movie.title%>
 		<h2>Posted By: <%=@user.username%></h2>
 		<%= @post.title %>
 		<%= @post.content %>
@@ -29,4 +32,28 @@
 		<%= render @post.comments %>
 		<h3>Add a comment</h3>
 		<%= render "comments/form" %>
+
+
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
 	</div>
