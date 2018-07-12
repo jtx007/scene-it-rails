@@ -8,54 +8,27 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <header>
+    <nav class="navbar sticky-top navbar-dark bg-black p-4">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse" id="navbarToggleExternalContent">>
+              <% if current_user %>
+              <i>Welcome <%= current_user.username %></i>
+              <%= link_to "Home", root_path, class: "nav-item float-center" %>
+              <%= link_to "Profile", user_path(current_user), class: "nav-item" %>
+              <%= link_to "Movies", movies_path, class: "nav-item" %>
+              <%= link_to 'Logout', logout_path, method: 'delete', class: "nav-item" %>
+              <%else%>
+              <%= link_to "Home", root_path, class: "nav-item float-center" %>
+              <%= link_to "Movies", movies_path, class: "nav-item" %>
+              <%= link_to "Register", new_user_path, class: "nav-item"%>
+              <%end%>
+        </div>
+    </nav>
+    <%=yield%>
+  </header>
   <body>
-    <!-- <div class="pos-f-t"> -->
-
-      <!-- </div> -->
-
-
-
-  <nav class="navbar sticky-top navbar-dark bg-black p-4">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="mr-auto bg-black" class="d-flex justify-content-end">
-        <!-- <h5 class="text-white h4"> -->
-        <% if current_user %>
-        <%= link_to "Home", root_path, class: "nav-item" "float-center" %>
-        <%= link_to "Profile", user_path(current_user), class: "nav-item" %>
-        <%= link_to "Movies", movies_path, class: "nav-item" %>
-        <%= link_to 'Logout', logout_path, method: 'delete', class: "nav-item" %>
-        <%else%>
-        <%= link_to "Home", root_path, class: "nav-item" "float-center" %>
-        <%= link_to "Movies", movies_path, class: "nav-item" %>
-        <%= link_to "Register", new_user_path, class: "nav-item"%>
-        <%end%>
-          <!-- <% if current_user %>
-          <%= link_to "Profile", user_path(current_user), class: "nav-item" %>
-          <%= link_to 'Logout', logout_path, method: 'delete', class: "nav-item" %>
-        <% else %>
-          <%= link_to 'Login', login_path, class: "nav-item" %>
-          <%= link_to "Register", new_user_path, class: "nav-item"%>
-        <% end %>
-        <%= link_to " Movies", movies_path, class: "nav-item" %> -->
-
-        <!-- <a class="nav-item text-muted">
-          <%if current_user %>
-            <i>Welcome <%= current_user.username %></i>
-          <% else %>
-            <i><%= link_to "Register Here", new_user_path, class: "nav-item" %></i>
-          <% end %>
-        </a> -->
-      </div>
-    </div>
-  </nav>
-
-
-
-    <%= yield %>
   </body>
 </html>
