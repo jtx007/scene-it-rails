@@ -1,14 +1,29 @@
-<h1><%=@user.username%> Profile Page</h1>
 
-<ul style="list-style: none;">
+<h1 style="font-family:shakapow;text-align:center;font-size:40px;"><%=@user.username%> Profile Page</h1>
+
+<ul style="list-style:none;font-size:40px;">
   <h3>Your Posts</h3>
 <%@user.posts.each do |post| %>
   <li><%=link_to post.title, post_path(post)%><li>
 <% end %>
 </ul>
+<br>
 
+<div>
 <h3>Previously Discussed</h3>
+<table>
 <% @user.movies.each do |movie| %>
-<img src="https://image.tmdb.org/t/p/w500/<%= movie.poster_path%>" alt="movie-poster">
+<div class="row">
+  <div class="col-sm-6">
+<div class="card" style="width: 12rem;">
+
+<img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= movie.poster_path%>" alt="movie-poster" alt="Card image cap">
+</div>
+</div>
+</div>
+</div>
 <% end %>
-<%= link_to "Create New Post", new_post_path  %>
+
+<div style="float:right";>
+<%= link_to "Create New Post", new_post_path, :class => "btn"  %>
+</div>

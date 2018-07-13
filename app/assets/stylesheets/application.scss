@@ -19,6 +19,11 @@
   src: url(asset-path("fonts/comic.ttf"));
 }
 
+@font-face{
+  font-family: "shakapow";
+  src: url(asset-path("fonts/shakapow.ttf"));
+}
+
 .custom {
   background-image: url('https://media.giphy.com/media/1n7zZwbc0UDDDK7g1b/giphy.gif');
   background-size: cover;
@@ -121,13 +126,15 @@ background-color: white;
 .myBox {
 align-content: center;
 color: black;
-border-radius: 10px;
+border-color: black;
+border-radius: 20px;
 background-color: wheat;
 border: none;
 padding: 5px;
-font: 24px/36px sans-serif;
-width: 400px;
-height: 200px;
+font-family: "shakapow", sans-serif;
+font-size: 40px;
+width: 800px;
+height: 400px;
 overflow: scroll;
 margin-left: auto;
 margin-right: auto;
@@ -156,3 +163,15 @@ border-radius: 10px;
 ::-webkit-scrollbar-thumb:hover {
 background: darkgrey;
 }
+
+.discussjj{
+  float: right;
+}
+
+.stylejj{
+  background-image: url(https://i.pinimg.com/originals/22/cb/ca/22cbcacdaa3bb718b40f3d977858196c.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
