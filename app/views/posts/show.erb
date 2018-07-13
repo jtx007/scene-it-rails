@@ -22,22 +22,40 @@ body, html, .parallax {
 <!-- Container element -->
 
 	<div class="parallax">
+    <br>
+    <br>
+    <div class="media">
+      <img class="align-self-start mr-3" id="postshowimg" src="https://image.tmdb.org/t/p/w500/<%= @movie.poster_path%>" alt="Generic placeholder image">
+      <div class="media-body">
+        <div style="color:black;">
+          <h3 style="text-align:center;font-family:shakapow;font-size:40px;"><span style="background-color:wheat;border-radius: 5px;"><%= @post.title %></span><h3>
+            <% if current_user == @user %>
+            <p style="text-align:center;"><%= link_to "Edit", edit_post_path(@post), :class => "btn-primary"%></p>
+            <% end %>
+
+            <br>
+            <span><div class="myBox2">
+            <%= @post.content %>
+
+          </div></span>
+          <h2 style="text-align:center;font-family:comic;font-size:40px;"><span style="background-color:wheat;border-radius: 5px;">Posted By: <%=@user.username%></span></h2>
+
+        </div>
+    </div>
+      </div>
 
 
-
-			<%=@movie.title%>
-		<h2>Posted By: <%=@user.username%></h2>
-		<%= @post.title %>
-		<%= @post.content %>
-    <% if current_user == @user %>
-    <%= link_to "Edit", edit_post_path(@post)  %>
-    <% end %>
+        <br>
+    
 		<br>
 		<br>
-		<h2><%= @post.comments.count %> comments</h2>
+    <center style="color:black;">
+		<h2 style="color:white;"><%= @post.comments.count %> comments</h2>
 		<%= render @post.comments %>
-		<h3>Add a comment</h3>
+    <br>
+		<h3 style="color:white;">Add a comment</h3>
 		<%= render "comments/form" %>
-
+  </center>
+  </div>
 
 	</div>

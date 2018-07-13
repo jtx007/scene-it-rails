@@ -1,17 +1,21 @@
 <body class="imgjj">
+  <br>
 <h1 style="font-family:shakapow;text-align:center;font-size:40px;"><span><%=@user.username%> Profile Page</span></h1>
+<br>
+<br>
 <div class="poststylingjj">
-<ul style="list-style:none;font-size:40px;">
+<ul style="list-style:none;font-size:40px;text-align:center;">
   <h3>Your Posts</h3>
 <%@user.posts.each do |post| %>
-  <li><%=link_to post.title, post_path(post)%><li>
+  <li><%=link_to post.title, post_path(post), :class => "postscolorjj"%><li>
 <% end %>
 </ul>
 </div>
 <br>
-
-<h3>Previously Discussed</h3>
-
+<br>
+<br>
+<p style="text-align:center;font-family:comic;font-size:40px;"><span style="background-color:wheat;border-radius: 5px;">Previously Discussed</span></p>
+<br>
 
 <div class="card-deck">
   <%  @user.movies.uniq.each do |movie| %>
@@ -25,7 +29,8 @@
     </div>
   <% end%>
 </div>
-
+<br>
+<br>
 
 <div style="margin-left:auto;margin-right:auto";>
 <%= link_to "Create New Post", new_post_path, :class => "btn"  %>

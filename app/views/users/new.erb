@@ -1,10 +1,47 @@
-<h1>New User Registration</h1>
-<%= form_for @user do |f| %>
-<p><%= f.label "Username" %></p>
-<%= f.text_field "username" %>
-<p><%= f.label "Password" %></p>
-<%= f.password_field "password" %>
-<p><%= f.label "Confirm Password"  %></p>
-<%= f.password_field "password_confirmation" %>
-<p><%= f.submit "Create User" %></p>
-<% end %>
+<style>
+body, html, .parallax {
+  height: -webkit-fill-available;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("/assets/YPBnXKE.jpg");
+
+
+
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+</style>
+
+
+<div class="parallax">
+  <br>
+    <div style="text-align:center;background;background-color:wheat;border-radius: 5px;width:300px;height:autopx;margin:5rem auto;border: black solid 5px;" >
+      <h1> New User Registration</h1>
+      <%= form_for @user do |f| %>
+      <p><%= f.label "Username" %></p>
+      <%= f.text_field "username" %>
+      <p><%= f.label "Password" %></p>
+      <%= f.password_field "password" %>
+      <p><%= f.label "Confirm Password"  %></p>
+      <%= f.password_field "password_confirmation" %>
+      <p><%= f.submit "Create User" %></p>
+      <% end %>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
