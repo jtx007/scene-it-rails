@@ -9,20 +9,22 @@
 </ul>
 <br>
 
-<div>
 <h3>Previously Discussed</h3>
-<table>
-<% @user.movies.each do |movie| %>
-<div class="row">
-  <div class="col-sm-6">
-<div class="card" style="width: 12rem;">
 
-<img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= movie.poster_path%>" alt="movie-poster" alt="Card image cap">
+
+<div class="card-deck">
+  <% @user.movies.each do |movie| %>
+    <div class="card" style="width: 18rem;">
+      <%= link_to movie_path(movie) do %>
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= movie.poster_path%>" class="img-fluid" alt="movie-poster" alt="Card image cap" >
+      <% end %>
+      <div class="card-body">
+        <p class="card-text"><%= movie.description %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
-</div>
-</div>
-</div>
-<% end %>
+
 
 <div style="float:right";>
 <%= link_to "Create New Post", new_post_path, :class => "btn"  %>
