@@ -9,11 +9,11 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = session[:user_id]
-    if @post.valid
+    if @post.valid?
       @post.save
       redirect_to post_path(@post)
     else
-      puts "Failed to create post"  
+      puts "Failed to create post"
     end
   end
 

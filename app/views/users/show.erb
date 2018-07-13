@@ -13,7 +13,7 @@
 
 
 <div class="card-deck">
-  <% @user.movies.each do |movie| %>
+  <%  @user.movies.each do |movie| %>
     <div class="card" style="width: 18rem;">
       <%= link_to movie_path(movie) do %>
         <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= movie.poster_path%>" class="img-fluid" alt="movie-poster" alt="Card image cap" >
@@ -22,7 +22,7 @@
         <p class="card-text"><%= movie.description %></p>
       </div>
     </div>
-  <% end %>
+  <% end.uniq%>
 </div>
 
 
