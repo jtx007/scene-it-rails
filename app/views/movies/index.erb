@@ -1,12 +1,33 @@
-<h1>Marvel Avengers Collection</h1>
+<style>
+body, html, .parallax {
+  height: 100%;
+}
 
+.parallax {
+    /* The image used */
+    background-image: url("https://wallpapercave.com/wp/hTDD0QO.jpg");
+
+
+
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
 <!-- https://image.tmdb.org/t/p/w500/ -->
-
-<ul style="list-style: none;">
-	<% @movies.each do |mov| %>
-    <li> <img src="https://image.tmdb.org/t/p/w500/<%= mov.poster_path%>" alt="movie-poster"></li>
-		<h2><li> Title: <%=link_to mov.title, movie_path(mov) %> </li>
-		<li> Overview: <%= mov.description%> </li>
-		<li> Primary Release Date:<%= mov.release_date %> </li></h2>
-		<%end%>
-</ul>
+<div class="parallax">
+<div class="card-columns">
+  <%  @movies.each do |movie| %>
+    <div class="card" style="width: 18rem;">
+      <%= link_to movie_path(movie) do %>
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= movie.poster_path%>" class="img-fluid" alt="movie-poster" alt="Card image cap">
+      <% end %>
+      <div class="card-body">
+        <p class="card-text"><%= movie.description %></p>
+      </div>
+    </div>
+  <% end%>
+</div>
+</div>

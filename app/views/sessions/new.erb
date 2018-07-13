@@ -1,11 +1,53 @@
-<h1> Login </h1>
 
-<%= form_tag sessions_path do  %>
-<%= label_tag "Username" %>
-<%= text_field_tag :username %>
-<%= label_tag "Password" %>
-<%= password_field_tag :password  %>
-<%= submit_tag "Login"  %>
-<% end %>
 
-<p> New to the site? <%= link_to "Sign up here", new_user_path %></p>
+
+<style>
+body, html, .parallax {
+  height: -webkit-fill-available;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("/assets/YPBnXKE.jpg");
+
+
+
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+</style>
+
+
+<div class="parallax">
+  <br>
+    <div style="text-align:center;background;background-color:wheat;border-radius: 5px;width:300px;height:autopx;margin:5rem auto;border: black solid 5px;" >
+      <h1> Login </h1>
+
+      <%= form_tag sessions_path do  %>
+      <%= label_tag "Username" %>
+      <%= text_field_tag :username %>
+      <%= label_tag "Password" %>
+      <%= password_field_tag :password  %>
+      <%= submit_tag "Login"  %>
+      <% end %>
+      <br>
+      <br>
+      <p> New to the site? <%= link_to "Sign up here", new_user_path %></p>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>

@@ -1,22 +1,60 @@
 
+<style>
+body, html, .parallax {
+  height: 100%;
+}
 
+.parallax {
+    /* The image used */
+    background-image: url("https://www.hdwallpapers.in/download/avengers_tower_4k-2560x1600.jpg");
+
+
+
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+</style>
+<div class="parallax">
 
 <center>
 
-<h1><%=@movie.title%></h1>
+  <h1 style="text-align:center;font-family:shakapow;font-size:40px;"><span style="background-color:wheat;border-radius: 5px;"><%= @movie.title %></span></h1>
+
 
 <ul style="list-style: none;">
-    <li> <img src="https://image.tmdb.org/t/p/w500/<%= @movie.backdrop_path%>" alt="backdrop_path"</li>
-<h2><li> <%= @movie.title %> </li>
-		<li> <%= @movie.description%> </li>
-		<li> <%= @movie.release_date %> </li> </h2> 
+    <li> <img style="border:black solid 10px;margin-top:2rem;" src="https://image.tmdb.org/t/p/w500/<%= @movie.backdrop_path%>" alt="backdrop_path"></li>
+<h2>
+  <li>
+    <h3 style="text-align:center;font-family:shakapow;font-size:40px;"><span style="background-color:wheat;border-radius: 5px;"><%= @movie.release_date %></span></h3>
+ </li>
+		<li><h3 style="text-align:center;font-family:shakapow;font-size:40px;"><span style="background-color:wheat;border-radius: 5px;"><%= @movie.description %></span></h3>
+</li>
 </ul>
-<%= link_to "Create New Post", new_post_path %>
-<ul style="list-style: none;">
-  <% @movie.posts.each do |post| %>
-    <li>
-      <%= link_to post.title, post_path(post) %>
-    </li>
-  <% end %>
-</ul>
+<%= link_to "Create New Post", new_post_path, :class => "btn btn-lg" %>
+
 </center>
+
+<div class="moviepostbox">
+<ul style="list-style:none;font-size:40px;text-align:center;">
+  <h3>Your Posts</h3>
+<%@movie.posts.each do |post| %>
+  <li><%=link_to post.title, post_path(post), :class => "postscolorjj"%><li>
+<% end %>
+</ul>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>

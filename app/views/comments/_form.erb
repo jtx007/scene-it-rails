@@ -1,8 +1,7 @@
 <%= form_for ([@post, @post.comments.build]) do |f| %>
 
-<p><%= f.label current_user.username %></p>
-<p><%= f.label "content" %></p>
+<p style="color:white;"><%= f.label current_user.username %></p>
 <p><%= f.text_area "content" %></p>
 
-<%= f.submit "Reply" %>
+<%= f.submit "Reply", :class => "btn btn-primary" %>
 <% end %>
