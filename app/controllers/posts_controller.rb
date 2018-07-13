@@ -9,16 +9,18 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = session[:user_id]
-    byebug
-    @post.save
-    redirect_to post_path(@post)
+    if @post.valid
+      @post.save
+      redirect_to post_path(@post)
+    else
+      puts "Failed to create post"  
+    end
   end
 
   def show
     @post = Post.find(params[:id])
     @movie = Movie.find(@post.movie_id)
     @user = User.find(@post.user_id)
-    #byebug
   end
 
   def edit

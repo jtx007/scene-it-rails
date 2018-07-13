@@ -3,5 +3,5 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :comments
 
-  validates :title, length: { minimum: 6 }
+  validates :title, length: { minimum: 4 }
 end

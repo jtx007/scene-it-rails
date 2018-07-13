@@ -165,7 +165,7 @@ background: darkgrey;
 }
 
 .discussjj{
-  float: right;
+  margin: auto;
 }
 
 .stylejj{
@@ -179,4 +179,12 @@ background: darkgrey;
 .imgdimjj{
   height: 10rem;
   width: 10rem;
+}
+
+.imgjj{
+  background-image: url("http://castroverde.academiaemir.com/wp-content/uploads/2017/11/E9SUzM5.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
