@@ -1,8 +1,11 @@
+
 <%= form_for ([@post, @post.comments.build]) do |f| %>
 
 <p><%= f.label current_user.username %></p>
 <p><%= f.label "content" %></p>
-<p><%= f.text_area "content" %></p>
+<p><%= f.text_area "content", class: "form_control", id: :comment%></p>
 
 <%= f.submit "Reply" %>
 <% end %>
+
+</html>
