@@ -1,19 +1,20 @@
 <body class="imgjj">
-<h1 style="font-family:shakapow;text-align:center;font-size:40px;"><%=@user.username%> Profile Page</h1>
-
+<h1 style="font-family:shakapow;text-align:center;font-size:40px;"><span><%=@user.username%> Profile Page</span></h1>
+<div class="poststylingjj">
 <ul style="list-style:none;font-size:40px;">
   <h3>Your Posts</h3>
 <%@user.posts.each do |post| %>
   <li><%=link_to post.title, post_path(post)%><li>
 <% end %>
 </ul>
+</div>
 <br>
 
 <h3>Previously Discussed</h3>
 
 
 <div class="card-deck">
-  <%  @user.movies.each do |movie| %>
+  <%  @user.movies.uniq.each do |movie| %>
     <div class="card" style="width: 18rem;">
       <%= link_to movie_path(movie) do %>
         <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= movie.poster_path%>" class="img-fluid" alt="movie-poster" alt="Card image cap" >
@@ -22,7 +23,7 @@
         <p class="card-text"><%= movie.description %></p>
       </div>
     </div>
-  <% end.uniq%>
+  <% end%>
 </div>
 
 

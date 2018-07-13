@@ -193,3 +193,26 @@ background: darkgrey;
   width: 5.5rem;
   height: 5.5rem;
 }
+
+h1 span {
+  background-color: greenyellow;
+}
+
+.poststylingjj {
+  background-color: wheat;
+  opacity: .9;
+  width: 55%;
+  height: 25rem;
+  margin-left: 2rem;
+  padding: 1rem;
+  border: greenyellow solid 5px;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+.card-body {
+height: 10rem;
+overflow: scroll;
+background-color: wheat;
+font-family: "shakapow"
+}
