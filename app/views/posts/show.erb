@@ -5,7 +5,6 @@ body, html, .parallax {
 }
 
 .parallax {
-    /* The image used */
     background-image: url("/assets/marvel.jpg");
     background-attachment: fixed;
     background-position: center;
@@ -17,16 +16,19 @@ body, html, .parallax {
 <!-- Container element -->
 
 	<div class="parallax">
-  <div class="media">
-  <img class="align-self-start mr-3" src="https://image.tmdb.org/t/p/w500/<%= @post.movie.poster_path %>" alt="Generic placeholder image" id="movieposterrt">
-  <div class="media-body">
-    <h5 class="mt-0"><%=@movie.title%></h5>
-    <ul style="list-style: none;">
-      <li><%=@movie.description%></li>
-      <br>
-      <li><%=@movie.release_date%></li>
-    </ul>
-  </div>
+    <div class="card-deck">
+      <%  @user.movies.each do |movie| %>
+        <div class="card" style="width: 18rem;">
+          <%= link_to movie_path(movie) do %>
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= movie.poster_path%>" class="img-fluid" alt="movie-poster" alt="Card image cap" >
+          <% end %>
+          <div class="card-body">
+            <p class="card-text"><%= movie.description %></p>
+          </div>
+        </div>
+      <% end.uniq%>
+    </div>
+
   </div>
 
 
