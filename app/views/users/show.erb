@@ -17,7 +17,7 @@
 <p style="text-align:center;font-family:comic;font-size:40px;"><span style="background-color:wheat;border-radius: 5px;">Previously Discussed</span></p>
 <br>
 
-<div class="card-deck">
+<div class="card-columns">
   <%  @user.movies.uniq.each do |movie| %>
     <div class="card" style="width: 18rem;">
       <%= link_to movie_path(movie) do %>
